@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.18" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\Department\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Controllers\DepartmentController.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ConnectionString.cs" />
+    <Compile Remove="Models\NumGame.cs" />
+    <Compile Remove="NumGame.cs" />
+  </ItemGroup>
+</Project>

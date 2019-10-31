@@ -1,0 +1,33 @@
+﻿@model List<Product>
+    
+
+<h3>Product List</h3>
+ <hr />
+<div style="display:block">
+     <a href="/Product/InsertProduct/">Create a New Product</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>CategoryID</th>
+        <th>OnSale</th>
+        <th>StockLevel</th>
+    </tr>
+
+    @foreach (Product prod in Model)
+    {
+        <tr>
+            <td><a href=/Product/ViewProduct/@prod.ID>@prod.ID</a></td>
+            <td>@prod.Name</td>
+            <td>@prod.Price</td>
+            <td>@prod.CategoryID</td>
+            <td>@prod.OnSale</td>
+            <td>@prod.StockLevel</td>
+
+        </tr>
+    }
+</table>
+

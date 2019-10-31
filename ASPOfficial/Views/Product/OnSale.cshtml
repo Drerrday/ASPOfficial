@@ -1,0 +1,27 @@
+﻿@model List<Product>
+    
+<h1>Santa's Overload Cache</h1>
+ <hr />
+<h3>On-Sale Items</h3>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>CategoryID</th>
+        <th>OnSale</th>
+        <th>StockLevel</th>
+    </tr>
+
+    @foreach (Product prod in Model)
+     {
+        <tr>
+            <td>@prod.ID</td>
+            <td>@prod.Name</td>
+            <td>@prod.Price</td>
+            <td>@prod.CategoryID</td>
+            <td>@prod.OnSale</td>
+            <td>@prod.StockLevel</td>
+        </tr>
+     }
+</table>

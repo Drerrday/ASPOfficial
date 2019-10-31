@@ -1,0 +1,17 @@
+﻿@model List<Departments>
+    
+<h3>"Department" Info</h3>
+ <hr />
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    @foreach (Departments DEP in Model)
+     {
+        <tr>
+            <td>@DEP.DepartmentID</td>
+            <td>@DEP.Name</td>
+        </tr>
+     }
+</table>

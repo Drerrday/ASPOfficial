@@ -1,0 +1,35 @@
+﻿@model Product
+    
+
+<h3>"@Model.Name" Info</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>CategoryID</th>
+        <th>OnSale</th>
+        <th>StockLevel</th>
+    </tr>
+
+    
+        <tr>
+            <td>@Model.ID</td>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+            <td>@Model.CategoryID</td>
+            <td>@Model.OnSale</td>
+            <td>@Model.StockLevel</td>
+        </tr>
+</table>
+<div style="display:block">
+     <a href="/Product/UpdateProduct/@Model.ID">Update this Product</a>
+</div>
+<div style="display: block">
+    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <input type="submit" onclick="return confirm('Deleteing this product is permenant; Are you sure?')" value="Delete this product" />
+    }
+</div>

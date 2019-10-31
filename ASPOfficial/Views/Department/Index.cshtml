@@ -1,0 +1,18 @@
+﻿@model List<Departments>
+    
+<h3>Departments</h3>
+ <hr />
+<table>
+    <tr>
+        <th>DepartmentID</th>
+        <th>Name</th>
+    </tr>
+
+    @foreach (Departments DEP in Model)
+     {
+        <tr>
+            <td><a href=/Department/ViewDepartment/@DEP.DepartmentID>@DEP.DepartmentID</a></td>
+            <td>@DEP.Name</td>
+        </tr>
+     }
+</table>
